@@ -17,7 +17,7 @@ async function getConfig() {
             } else request.continue()
         })
 
-        await page.goto('https://watchsb.com/6dvixvndp8r3.html')
+        await page.goto('https://watchsb.com/bc05v29dt85y.html')
     }
     finally {
         await browser.close()
