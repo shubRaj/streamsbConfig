@@ -8,7 +8,7 @@ async function getConfig() {
         await page.setRequestInterception(true)
 
         page.on('request', (request) => {
-            if (request.url().includes("sources")) {
+            if (request.url().includes("sources") || (request.headers()["accept"].includes("application/json") && Object.keys(request.headers()).includes("watchsb"))) {
                 resp = {
                     source: request.url(),
                     header: request.headers()
